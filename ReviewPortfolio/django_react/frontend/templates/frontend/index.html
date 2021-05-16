@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load render_bundle from webpack_loader %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Review</title>
+</head>
+<body style="margin: 0; background-color:black;">
+  <div id="app"></div>
+  
+  {% if chart %}
+        <img src="data:image/png;base64, {{chart|safe}}" style="display: block; margin-left: auto; margin-right: auto;">
+    {% endif %}
+{% render_bundle 'frontend' %}
+</body>
+</html>
